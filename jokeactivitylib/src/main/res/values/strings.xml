@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JokeActivityLib</string>
+    <string name="fragment_text_joke">where\'s my joke</string>
+
+</resources>
