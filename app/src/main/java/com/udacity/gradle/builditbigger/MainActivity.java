@@ -1,16 +1,18 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
-import com.udacity.gradle.javajokes.Joker;
 import com.udacity.gradle.jokeactivitylib.JokeActivity;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity implements OnTaskCompleted  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +44,14 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void tellJoke(View view){
-        Joker myJoke = new Joker();
-//        Toast.makeText(this, myJoke.getJoke(), Toast.LENGTH_SHORT).show();
-
-        Intent intent = new Intent(this, JokeActivity.class);
-        intent.putExtra(JokeActivity.JOKE_KEY, myJoke.getJoke());
-        startActivity(intent);
+        new EndpointsAsyncTask(this).execute(this);
     }
 
+    @Override
+    public void onTaskCompleted(String result) {
+        Intent intent = new Intent(this, JokeActivity.class);
+        intent.putExtra(JokeActivity.JOKE_KEY, result);
+        startActivity(intent);
+    }
 
 }
