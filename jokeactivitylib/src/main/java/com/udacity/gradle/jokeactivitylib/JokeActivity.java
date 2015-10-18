@@ -3,8 +3,6 @@ package com.udacity.gradle.jokeactivitylib;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.net.Uri;
-import android.widget.Toast;
 
 /**
  * Created by ebal on 17/10/15.
@@ -31,18 +29,11 @@ public class JokeActivity extends AppCompatActivity implements JokeFragment.OnFr
         if (getIntent() != null) {
             // Retrieve the joke from the intent
             joke = getIntent().getStringExtra(JOKE_KEY);
-            // Pass it on to the fragment as an argument
-//            Bundle bundle = new Bundle();
-//            bundle.putString("joke", joke);
-//            jokeFragment.setArguments(bundle);
-
         }
         if (joke == null){
             joke = "So funny";
-//            Bundle bundle = new Bundle();
-//            bundle.putString("joke", joke);
-//            jokeFragment.setArguments(bundle);
         }
+
         JokeFragment jokeFragment = JokeFragment.newInstance(joke);
         Log.e("joke", joke);
 

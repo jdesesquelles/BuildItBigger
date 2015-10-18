@@ -1,0 +1,500 @@
+  123  cat build.gradle 
+  124  cat solution.gradle 
+  125  ls
+  126  cat src/main/java/com/udacity/gradle/JokeTeller.java 
+  127  locate JokeTeller.java
+  128  alias
+  129  . /Users/ebal/.profile 
+  130  alias
+  131  cat build.gradle 
+  132  cat solution.gradle 
+  133  cd ../4.01-Demo-CreatingAJavaLibrary/
+  134  ls
+  135  ls -alh
+  136  ls javaJokes/
+  137  cat build.gradle 
+  138  ls -alh
+  139  cd javaJokes/
+  140  ls -alh
+  141  ls src/
+  142  cat build.gradle 
+  143  pwd
+  144  ls
+  145  cat build.gradle 
+  146  cat build.gradle pwd
+  147  pwd
+  148  cd ..
+  149  cat settings.gradle 
+  150  cat build.gradle 
+  151  pwd
+  152  ls
+  153  ls app
+  154  ls app/src
+  155  ls app/src/main/
+  156  cat app/src/main/AndroidManifest.xml 
+  157  ls
+  158  java -version
+  159  ls ../4.03-Demo-CreatingAnAndroidLibrary/
+  160  pwd
+  161  ls ../4*
+  162  cd ../4.04-Exercise-CreateAnAndroidLibrary/
+  163  ls
+  164  cat exercise.txt 
+  165  cat solution/
+  166  ls solution/
+  167  ls solution/app/
+  168  ls ../4.*
+  169  cd ../4.02-Exercise-CreateAJavaLibrary/
+  170  ls
+  171  cat solution/
+  172  ls solution/
+  173  cat solution/settings.gradle 
+  174  cat solution/wizardJokes/build.gradle 
+  175  cat solution/manualJokes/build.gradle 
+  176  ls solution/manualJokes/
+  177  ls solution/manualJokes/src/
+  178  ls solution/manualJokes/src/main/
+  179  ls solution/manualJokes/src/main/java/
+  180  ls solution/manualJokes/src/main/java/com/udacity/
+  181  ls solution/manualJokes/src/main/java/com/udacity/example/
+  182  ls solution/manualJokes/src/main/java/com/udacity/example/jokes/
+  183  cat solution/manualJokes/src/main/java/com/udacity/example/jokes/JokeSmith.java 
+  184  javac -version
+  185  ls /Users/ebal/Library/Logs/AndroidStudio1.*
+  186  ls -alh /Users/ebal/Library/Logs/AndroidStudio1.*
+  187  ls -als /etclh /Users/ebal/Library/Logs/AndroidStudio1.*
+  188  ls /etc/
+  189  rm -Rf /Applications/Android\ Studio.app/
+  190  rm -Rf /Users/ebal/Library/Preferences/AndroidStudio1.*
+  191  rm /Users/ebal/Library/Preferences/com.google.android.studio.plist 
+  192  rm -Rf /Users/ebal/Library/Application\ Support/AndroidStudio1.*
+  193  rm -Rf /Users/ebal/Library/Logs/AndroidStudio1.*
+  194  rm -Rf /Users/ebal/Library/Caches/AndroidStudio1.*
+  195  rm -Rf /Users/ebal/.gradle/
+  196  rm -Rf /Users/ebal/Library/Android/*
+  197  df -kh
+  198  locate sdcard.img
+  199  cd         Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
+  200  cd /Users/ebal/.android/avd/
+  201  du .
+  202  locate resize2fs
+  203  top
+  204  history
+  205  vi UninstallAndroidStudio.sh
+  206  ls -alh
+  207  pwd
+  208  mv UninstallAndroidStudio.sh /Users/ebal/
+  209  ls -alh
+  210  cd ~
+  211  ls
+  212  ls -alh
+  213  chmod u+x UninstallAndroidStudio.sh 
+  214  ./UninstallAndroidStudio.sh 
+  215  locate jdk
+  216  locate jdk8
+  217  ls ~/Library/
+  218  ls ~/Library/Android/
+  219  locate avd
+  220  vi UninstallAndroidStudio.sh 
+  221  ./UninstallAndroidStudio.sh 
+  222  ./UninstallAndroidStudio.sh 
+  223  ./UninstallAndroidStudio.sh 
+  224  ls /Users/ebal/Library/Preferences/
+  225  cd /Users/ebal/Library/Android/sdk
+  226  ls
+  227  ls platform-tools/
+  228  ls build-tools/
+  229  ls build-tools/23.0.1/
+  230  adb
+  231  adb tcpip 5555
+  232  adb connect 192.168.2.104
+  233  adb devices
+  234  ls
+  235  cd Documents/
+  236  ls
+  237  cd libs/
+  238  ls 
+  239  ls -alh
+  240  ls zxing-master/
+  241  adb devices
+  242  adb shell
+  243  adb shell
+  244  adb devices
+  245  adb devices
+  246  adb tcpip 5555
+  247  adb connect 192.168.2.104
+  248  adb devices
+  249  adb devices
+  250  adb tcpip 5555
+  251  adb connect 192.168.2.104
+  252  cd /Users/ebal/
+  253  ls
+  254  cd AndroidStudioProjects/
+  255  ls
+  256  adb devices
+  257  adb connect 192.168.2.104
+  258  adb devices
+  259  cd SuperDuo
+  260  ls
+  261  cd Football_Scores-master/
+  262  ls
+  263  rm -rf zxing/
+  264  ls
+  265  pwd
+  266  git status
+  267  git add .
+  268  git status
+  269  ls -alh
+  270  rm -rf zxing/
+  271  ls -alh
+  272  adb devices
+  273  adb tcpip 5555
+  274  pwd
+  275  cd ../..
+  276  ls
+  277  rm -rf Udacity-BuildItBigger/
+  278  ls
+  279  pwd
+  280  ls
+  281  cd Udacity-GradleForAndroidAndJava/
+  282  ls
+  283  cd 1.01
+  284  cd 1.01-Exercise-RunYourFirstTask/
+  285  ls
+  286  ./gradlew
+  287  gradlew tasks
+  288  ./gradlew tasks
+  289  ./gradlew hello
+  290  ls
+  291  ./gradlew components
+  292  ls
+  293  cat build.gradle
+  294  vi build.gradle 
+  295  ./gradlew tasks
+  296  ./gradlew hello
+  297  ls
+  298  vi solution.gradle
+  299  cat solution.gradle
+  300  ./gradlew -b solution.gradle hello
+  301  sublime
+  302  locate sublime
+  303  java -version
+  304  cd ../1.02-Exercise-InstallGradle/
+  305  ls
+  306  vi build.gradle 
+  307  brew install gradle
+  308  vi build.gradle 
+  309  cat build.gradle 
+  310  cd ../1.11-Exercise-ConfigureFileSystemTasks/
+  311  vi build.gradle 
+  312  gradle -b solution.gradle tasks
+  313  ls
+  314  ls src/
+  315  cat solution.gradle 
+  316  ls src/docs/
+  317  ls src/web/
+  318  cd ../1.12-Exercise-ExploreIncrementalBuilds/
+  319  gradle tasks
+  320  gradle tasks --all
+  321  gradle copySources
+  322  gradle copySources
+  323  ls src/
+  324  ls src/docs/
+  325  echo "test" >> src/docs/readme.txt 
+  326  gradle copySources
+  327  ls
+  328  ls build/out/
+  329  cat build/out/docs/readme.txt 
+  330  ls
+  331  rm -rf build
+  332  ls
+  333  gradle copySources
+  334  gradle tasks
+  335  gradle bundleSources
+  336  gradle bundleSources
+  337  ls ../1.1*
+  338  cd ../1.16-Exercise-CreateATaskType/
+  339  ls
+  340  cat build.gradle 
+  341  cat solution.gradle 
+  342  ls ../1.1*
+  343  cd ../1.17-Exercise-InvestigateLogging/
+  344  ls
+  345  gradle --debug hello
+  346  cat build.gradle 
+  347  gradle --debug hello | grep World
+  348  ls ../1.1*
+  349  cd ../1.18-Exercise-ExploreTheBuildLifecycle/
+  350  ls
+  351  cat build.gradle 
+  352  cat solution.gradle 
+  353  gradle -b solution.gradle test
+  354  emacs
+  355  adb tcpip 5555
+  356  adb connect 192.168.2.104
+  357  pwd
+  358  cd ../..
+  359  pwd
+  360  ls
+  361  cd SuperDuo
+  362  ls
+  363  cd Football_Scores-master/
+  364  ls
+  365  git status
+  366  git status
+  367  git add .
+  368  git status
+  369  git status
+  370  git add .
+  371  git status
+  372  git status
+  373  git add .
+  374  git status
+  375  git status
+  376  pwd
+  377  cd ../..
+  378  pwd
+  379  ls
+  380  mv Udacity-BuildItBigger/ Udacity-BuildItBigger2
+  381  ls
+  382  ls Udacity-GradleForAndroidAndJava/
+  383  ls Udacity-GradleForAndroidAndJava/FinalProject/
+  384  cp Udacity-GradleForAndroidAndJava/FinalProject/* Udacity-BuildItBigger/
+  385  cp -r Udacity-GradleForAndroidAndJava/FinalProject/* Udacity-BuildItBigger/
+  386  mkdir Udacity-BuildItBigger
+  387  cp -r Udacity-GradleForAndroidAndJava/FinalProject/* Udacity-BuildItBigger/
+  388  ls Udacity-BuildItBigger
+  389  pwd
+  390  ls
+  391  cd Udacity-BuildItBigger
+  392  git status
+  393  history 
+  394  pwd
+  395  ls
+  396  cd app
+  397  ls
+  398  cd src/
+  399  ls
+  400  cd main/
+  401  ls
+  402  cd java/
+  403  ls
+  404  mv com/udacity/gradle/builditbigger/ co/fabrk
+  405  mkdir co/fabrk
+  406  mkdir co
+  407  cd co
+  408  mkdir fabrk
+  409  cd ../..
+  410  mv com/udacity/gradle/builditbigger/ co/fabrk
+  411  mv com/udacity/gradle/builditbigger/ co/fabrk/
+  412  cd com/udacity/gradle
+  413  pwd
+  414  ls
+  415  cd java/
+  416  ls
+  417  mv com/udacity/gradle/builditbigger/ co/fabrk/
+  418  ls co/fabrk/
+  419  ls co/fabrk/builditbigger/
+  420  pwd
+  421  ls
+  422  rm -rf com/
+  423  ls
+  424  ls
+  425  pwd
+  426  cd ../../
+  427  ls
+  428  cd androidTest/
+  429  ls
+  430  cd java/
+  431  ls
+  432  mkdir -r co/fabrk
+  433  mkdir co
+  434  cd co
+  435  mkdir fabrk
+  436  cd ..
+  437  ls
+  438  mv com/udacity/gradle/builditbigger/ co/fabrk/
+  439  ls co/fabrk/
+  440  rm -rf com/
+  441  ls
+  442  pwd
+  443  cd ../../..
+  444  pwd
+  445  cd ..
+  446  ls
+  447  cd javajokes/
+  448  ls
+  449  cd src/
+  450  ls
+  451  cd main/
+  452  ls
+  453  cd java/
+  454  ls
+  455  rmdir co
+  456  mkdir co
+  457  mkdir co/fabrk
+  458  mv com/example/* co/fabrk/
+  459  ls co/fabrk/
+  460  rm -rf com/
+  461  cd co/fabrk/
+  462  ls
+  463  mkdir javaJokes
+  464  mv Joker.java javaJokes/
+  465  ls
+  466  pwd
+  467  ls
+  468  mv javaJokes/ javajokes/
+  469  pwd
+  470  clear
+  471  cat solu
+  472  pwd
+  473  pwd
+  474  touch /Users/ebal/2209.test
+  475  locate 2209.test
+  476  sudo updatedb
+  477  sudo locate.updatedb
+  478  sudo /usr/libexec/locate.updatedb
+  479  locate 2209.test
+  480  man alias
+  481  clear
+  482  alias updatedb="sudo /usr/libexec/locate.updatedb"
+  483  updatedb
+  484  dmesg
+  485  pwd
+  486  ls -alh /Users/ebal/
+  487  vi /Users/ebal/.profile 
+  488  alias
+  489  pwd
+  490  ls
+  491  pwd
+  492  cd javajokes/
+  493  ls
+  494  pwd
+  495  cd /Users/ebal/AndroidStudioProjects/Udacity-BuildItBigger/
+  496  git status
+  497  git commit -m "feat adding joke telling library, button display joke retrieve from the lib in a toast message"
+  498  git push origin master
+  499  locate 1.7
+  500  updatedb
+  501  pwd
+  502  cd ../Udacity-GradleForAndroidAndJava/
+  503  cd 4.04-Exercise-CreateAnAndroidLibrary/
+  504  ls
+  505  cd solution/
+  506  ls
+  507  cd jokedisplay/
+  508  ls
+  509  cd src/main/java/com/udacity/gradle/
+  510  ls
+  511  cd jokedisplay/
+  512  ms
+  513  ls
+  514  cat JokeActivity
+  515  cd JokeActivity
+  516  ls -alh
+  517  cat JokeActivity.java 
+  518  ls
+  519  cat JokeActivityFragment.java 
+  520  cat JokeActivity.java 
+  521  pwd
+  522  cd ../..
+  523  ls
+  524  cd ../../..
+  525  pwd
+  526  cd ..
+  527  ls
+  528  cd ..
+  529  pwd
+  530  cd ..
+  531  pwd
+  532  cd ..
+  533  pwd
+  534  cd ../4.09-Demo-AndroidUnitTesting/
+  535  ls
+  536  ls app
+  537  ls app/src/
+  538  ls app/src/test
+  539  ls app/src/test/java/
+  540  ls app/src/test/java/com/udacity/gradle/
+  541  ls app/src/test/java/com/udacity/gradle/testing/
+  542  cat app/src/test/java/com/udacity/gradle/testing/EchoTest.java 
+  543  cat app/src/test/java/com/udacity/gradle/
+  544  ls app/src/test/java/com/udacity/gradle/
+  545  ls app/src/
+  546  ls
+  547  cat build.gradle 
+  548  ls
+  549  cat settings.gradle 
+  550  cat app/src/main/java/com/udacity/gradle/testing/MainActivity.java 
+  551  cat app/src/main/java/com/udacity/gradle/testing/Echo.java 
+  552  pwd
+  553  ls
+  554  cd app/
+  555  ls
+  556  cd src/
+  557  ls
+  558  cd androidTest
+  559  ls
+  560  cd java/
+  561  ls
+  562  cd com/udacity/gradle/
+  563  ls
+  564  cd testing/
+  565  ls
+  566  cat EchoAndroidTest.java 
+  567  cd ~/AndroidStudioProjects/
+  568  ls
+  569  pwd
+  570  pwd
+  571  mkdir BuildItBigger
+  572  cd BuildItBigger/
+  573  ls
+  574  mkdir arch
+  575  mv arch/ ../
+  576  cd ..
+  577  ls
+  578  mv BuildItBigger/ arch/
+  579  ls
+  580  ls arch/
+  581  mv Udacity-BuildItBigger2/ arch/
+  582  mv TestYouTube/ arch/
+  583  ls -alh
+  584  mv AirControl/ arch/
+  585  mv Sunshine* arch/
+  586  ls -alh
+  587  mv CODAndSunshine/ arch/
+  588  ls -alh
+  589  mv DB* arch/
+  590  ls -alh
+  591  mv SuperDuo* arch/
+  592  ls
+  593  mv MyAppPortfolio2 arch/
+  594  mv MyApplication/ arch/
+  595  ls -alh
+  596  mv TodoList/ arch/
+  597  mv PopularMovies1/ arch/
+  598  ls -alh
+  599  mv sampleYoutube arch/
+  600  ls -alh
+  601  mv EndPoint arch/
+  602  ls -alh
+  603  mv DetilActivityClassDiagram.suml arch/
+  604  ls -alh
+  605  mkdir BuildItBigger
+  606  cp -r Udacity-GradleForAndroidAndJava/FinalProject/ BuildItBigger/
+  607  ls BuildItBigger/
+  608  ls arch/
+  609  ls -alh arch/
+  610  ls arch/DB
+  611  ls -alh
+  612  pwd
+  613  cd BuildItBigger/
+  614  git status
+  615  git add .
+  616  git status
+  617  git status
+  618  git commit -m "feat Jokes are provided by a Java library and displayed by an activity contained in an Android Library. Jokes are passed to it as an Intent Extra String."
+  619  git remote
+  620  history | grep git
+  621  history
+  622  history > hist.txt
