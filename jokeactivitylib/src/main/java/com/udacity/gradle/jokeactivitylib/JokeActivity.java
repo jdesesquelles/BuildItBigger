@@ -14,22 +14,19 @@ public class JokeActivity extends AppCompatActivity implements JokeFragment.OnFr
     public static String JOKE_KEY = "Joke key";
     private static final String JOKEFRAGMENT_TAG = "JKTAG";
 
-
     @Override
     public void onFragmentInteraction(String joke) {
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke);
-//        JokeFragment jokeFragment = new JokeFragment();
-
         if (getIntent() != null) {
             // Retrieve the joke from the intent
             joke = getIntent().getStringExtra(JOKE_KEY);
         }
+        // Avoid crash when the joke string object is null. Should not happen normally.
         if (joke == null){
             joke = "So funny";
         }
@@ -39,7 +36,6 @@ public class JokeActivity extends AppCompatActivity implements JokeFragment.OnFr
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.joke_fragment_container, jokeFragment, JOKEFRAGMENT_TAG)
-//                .addToBackStack(null)
                 .commit();
 
     }

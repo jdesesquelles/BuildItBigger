@@ -22,13 +22,11 @@ public class TestEndpointsAsyncTask extends ApplicationTestCase<Application> imp
 
     public void testEndpointAsyncTask () {
         try {
-//             new EndpointsAsyncTask(null).execute(new Pair<Context, String>(getInstrumentation().getTargetContext(), "Manfred")).get();
+            // First argument of the constructor is meant to be the listener
+            // We pass null for the test since there is nothing in the test call back func
             new EndpointsAsyncTask(null).execute(getContext());
             timer.await(30, TimeUnit.SECONDS);
-//            Log.e("testEndpointAsyncTask - result", endpointsAsyncTaskResult);
-//            assertNotNull(result);
         } catch (InterruptedException iE) {
-            Log.e("InterruptedException", iE.toString());
             fail("Time out");
         }
     }

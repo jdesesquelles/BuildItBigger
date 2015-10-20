@@ -1,19 +1,25 @@
-package com.udacity.gradle.builditbigger.free;
+package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.content.Intent;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
 import com.udacity.gradle.builditbigger.OnTaskCompleted;
 import com.udacity.gradle.builditbigger.R;
 import com.udacity.gradle.jokeactivitylib.JokeActivity;
 
 
+
 public class MainActivity extends AppCompatActivity implements OnTaskCompleted  {
+
+    private InterstitialAd mInterstitialAd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +51,12 @@ public class MainActivity extends AppCompatActivity implements OnTaskCompleted  
     }
 
     public void tellJoke(View view){
+//        mInterstitialAd = new InterstitialAd(this);
+//        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+//        AdRequest adRequest = new AdRequest.Builder()
+//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+//                .build();
+//        mInterstitialAd.loadAd(adRequest);
         new EndpointsAsyncTask(this).execute(this);
     }
 
