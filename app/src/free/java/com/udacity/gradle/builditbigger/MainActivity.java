@@ -7,7 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.util.Log;
-
+import android.widget.ProgressBar;
+import android.support.v4.app.Fragment;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.InterstitialAd;
@@ -19,17 +20,22 @@ public class MainActivity extends AppCompatActivity implements OnTaskCompleted  
 
     private InterstitialAd mInterstitialAd;
     private CountDownLatch mLatch;
+    private String MFRAG = "mainFragment";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Adding the fragment dynamically
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment, new MainActivityFragment(), MFRAG).commit();
+        // Interstitial ads
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
+                requestNewInterstitial();
                 getJokeFromServer();
             }
 
@@ -69,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements OnTaskCompleted  
     }
 
     private void getJokeFromServer(){
+        toggleSpinner();
         new EndpointsAsyncTask(this).execute(this);
     }
 
@@ -83,9 +90,17 @@ public class MainActivity extends AppCompatActivity implements OnTaskCompleted  
 
     @Override
     public void onTaskCompleted(String result) {
+        toggleSpinner();
         Intent intent = new Intent(this, JokeActivity.class);
         intent.putExtra(JokeActivity.JOKE_KEY, result);
         startActivity(intent);
+    }
+
+    private void toggleSpinner(){
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag(MFRAG);
+        ProgressBar spinner = (ProgressBar) fragment.getView().findViewById(R.id.jokeprogressBar);
+        if (spinner.getVisibility()== View.GONE) {spinner.setVisibility(View.VISIBLE);}
+        else if (spinner.getVisibility()== View.VISIBLE) {spinner.setVisibility(View.GONE);}
     }
 
 }

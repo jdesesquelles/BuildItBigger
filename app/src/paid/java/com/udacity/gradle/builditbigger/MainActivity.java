@@ -10,14 +10,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
 import com.udacity.gradle.jokeactivitylib.JokeActivity;
+import android.support.v4.app.Fragment;
+import android.widget.ProgressBar;
 
 
 public class MainActivity extends AppCompatActivity implements OnTaskCompleted  {
+
+    private String MFRAG = "mainFragment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Adding the fragment dynamicaly
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment, new MainActivityFragment(), MFRAG).commit();
+
     }
 
 
@@ -44,14 +51,23 @@ public class MainActivity extends AppCompatActivity implements OnTaskCompleted  
     }
 
     public void tellJoke(View view){
+        toggleSpinner();
         new EndpointsAsyncTask(this).execute(this);
     }
 
     @Override
     public void onTaskCompleted(String result) {
+        toggleSpinner();
         Intent intent = new Intent(this, JokeActivity.class);
         intent.putExtra(JokeActivity.JOKE_KEY, result);
         startActivity(intent);
+    }
+
+    private void toggleSpinner(){
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag(MFRAG);
+        ProgressBar spinner = (ProgressBar) fragment.getView().findViewById(R.id.jokeprogressBar);
+        if (spinner.getVisibility()== View.GONE) {spinner.setVisibility(View.VISIBLE);}
+        else if (spinner.getVisibility()== View.VISIBLE) {spinner.setVisibility(View.GONE);}
     }
 
 }
