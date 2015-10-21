@@ -6,23 +6,39 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.util.Log;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.InterstitialAd;
 import com.udacity.gradle.jokeactivitylib.JokeActivity;
-
+import java.util.concurrent.CountDownLatch;
 
 
 public class MainActivity extends AppCompatActivity implements OnTaskCompleted  {
 
     private InterstitialAd mInterstitialAd;
+    private CountDownLatch mLatch;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                getJokeFromServer();
+            }
+
+            @Override
+            public void onAdLoaded() {
+                mLatch.countDown();
+            }
+        });
+        requestNewInterstitial();
     }
 
     @Override
@@ -47,21 +63,12 @@ public class MainActivity extends AppCompatActivity implements OnTaskCompleted  
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view){
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-//                requestNewInterstitial();
-                getJokeFromServer();
-            }
-        });
-        requestNewInterstitial();
-
+    public void tellJoke(View view) throws InterruptedException{
+        mLatch.await();
+        mInterstitialAd.show();
     }
 
-    private void getJokeFromServer() {
+    private void getJokeFromServer(){
         new EndpointsAsyncTask(this).execute(this);
     }
 
@@ -70,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements OnTaskCompleted  
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
         mInterstitialAd.loadAd(adRequest);
+        mLatch = new CountDownLatch(1);
+        Log.e("Ad loding", "Just started");
     }
 
     @Override

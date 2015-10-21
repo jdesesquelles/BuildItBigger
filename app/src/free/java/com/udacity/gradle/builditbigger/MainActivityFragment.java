@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import android.widget.ProgressBar;
 
 
 /**
@@ -15,6 +16,7 @@ import com.google.android.gms.ads.AdView;
  */
 public class MainActivityFragment extends Fragment {
 
+    private ProgressBar spinner;
 
 
     public MainActivityFragment() {
@@ -29,6 +31,10 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
+
+        // Progress bar for joke loading
+        spinner = (ProgressBar) root.findViewById(R.id.jokeprogressBar);
+        spinner.setVisibility(View.GONE);
 
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to

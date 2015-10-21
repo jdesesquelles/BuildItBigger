@@ -23,5 +23,12 @@
 
         />
 
+    <ProgressBar
+        android:id="@+id/jokeprogressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
