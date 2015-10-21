@@ -12,13 +12,30 @@ buildscript {
     }
 }
 
-// Task
-// appengineRun
-// Test
-// appengineStop
+
 
 allprojects {
     repositories {
         jcenter()
     }
 }
+
+// Testing task: Start the app engine, run the test then stop the app engine
+// Running instance of the app engine should be stoped before running this task
+task testAsyncTask(dependsOn: ":jokebackend:appengineRun") {
+    group 'verification'
+    description 'Start the backend, run the asynctask test and stop the backend'
+}
+tasks.getByPath(":app:connectedCheck").mustRunAfter tasks.getByPath(":jokebackend:appengineRun")
+tasks.getByPath(":jokebackend:appengineStop").mustRunAfter tasks.getByPath(":app:connectedCheck")
+tasks.getByPath("testAsyncTask").dependsOn(":jokebackend:appengineRun", ":app:connectedCheck",":jokebackend:appengineStop")
+
+// task to install both free and paid debug version at the same time
+task installAllDebug {
+    group 'install'
+    description 'intsall both the paid and free debug version on the devices.'
+
+}
+tasks.getByPath(":app:installFreeDebug").mustRunAfter tasks.getByPath(":app:installPaidDebug")
+tasks.getByPath("installAllDebug").dependsOn(":app:installFreeDebug", ":app:installPaidDebug")
+
