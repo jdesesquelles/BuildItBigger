@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="indigo_300">#7986CB</color>
+    <color name="indigo_500">#3F51B5</color>
+    <color name="indigo_700">#303F9F</color>
+    <color name="pink_a200">#FF4081</color>
+
     <color name="primary">#FF9800</color>
     <color name="primary_dark">#F57C00</color>
     <color name="primary_light">#FFE0B2</color>
